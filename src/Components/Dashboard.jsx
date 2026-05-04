@@ -488,7 +488,7 @@ const CLIENT_STEPS = [
 ];
 
 const AGENT_STEPS = [
-  { icon:"✍️", title:"Sign Up as Agent",      desc:"Create your verified agent profile, upload credentials, and get approved to start listing properties." },
+  { icon:"✍️", title:"Sign Up as Agent or Landlord",      desc:"Create your verified agent profile, upload credentials, and get approved to start listing properties." },
   { icon:"📸", title:"Create a Listing",      desc:"Add detailed property listings with photos, pricing, location, and amenities to attract serious buyers." },
   { icon:"📅", title:"Manage Inspections",    desc:"Accept or reschedule inspection requests, confirm bookings, and guide clients through every visit." },
   { icon:"📈", title:"Grow Your Business",    desc:"Track leads, measure listing performance, and use data insights to close more deals faster." },
@@ -713,7 +713,7 @@ export default function GHOUSECONNECT() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 leading-tight mb-4 sm:mb-5">Nigeria's Most Trusted Real Estate Platform</h2>
             <p className="text-gray-500 text-base sm:text-lg mb-6">Connecting property seekers with exceptional listing across the country. Whether you're searching for your dream home or managing a portfolio of properties. GHOUSECONNECT have everything you need. </p>
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              {[["10K+","Active Listings"],["500+","Verified Agents"],["95%","Success Rate"],["₦50B+","Transactions"]].map(([n,l]) => (
+              {[["10K+","Active Listings"],["500+","Verified Agents and Landlords"],["95%","Success Rate"],["₦50B+","Transactions"]].map(([n,l]) => (
                 <div key={l} className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-100">
                   <div className="text-blue-600 font-black text-xl sm:text-2xl">{n}</div>
                   <div className="text-gray-500 text-sm">{l}</div>
@@ -762,7 +762,7 @@ export default function GHOUSECONNECT() {
             {[
               {
                 Icon: Shield,
-                title: "Verified Agents",
+                title: "Verified Agents and Landlords",
                 desc: "only Agents with verified identity can list products & sell",
               },
               {
@@ -826,7 +826,7 @@ export default function GHOUSECONNECT() {
 
             {/* Left: text content */}
             <div>
-              <h3 className="text-3xl sm:text-4xl font-black text-blue-800 mb-5">Client</h3>
+              <h3 className="text-3xl sm:text-4xl font-black text-blue-800 mb-5">Users</h3>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-8 max-w-md">
                 Browse hundreds of verified listings, compare properties, book inspections at your convenience,
                 and track every step from your personal dashboard.
@@ -865,7 +865,7 @@ export default function GHOUSECONNECT() {
 
             {/* Right: text content */}
             <div className="order-1 md:order-2">
-              <h3 className="text-3xl sm:text-4xl font-black text-blue-800 mb-5">Agents</h3>
+              <h3 className="text-3xl sm:text-4xl font-black text-blue-800 mb-5">Agents and Landlords</h3>
               <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-8 max-w-md">
                 Upload and manage your listings, handle inspection bookings, approve or reject requests,
                 and track your earnings — all from one powerful dashboard..
