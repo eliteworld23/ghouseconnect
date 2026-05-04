@@ -268,7 +268,7 @@ function AuthModal({ onClose, defaultTab = "signin" }) {
       <div className="flex bg-blue-50 rounded-xl p-1 gap-1 mb-5">
         {[
           { key:"user",  Icon:User,      label: tab==="register" ? "Register as User"  : "Sign in as User"  },
-          { key:"agent", Icon:Building2, label: tab==="register" ? "Register as Agent" : "Sign in as Agent" },
+          { key:"agent", Icon:Building2, label: tab==="register" ? "Register as Agent" : "Sign in as Agent or Landlord" },
         ].map(({ key, Icon, label }) => (
           <button key={key} onClick={() => { setUT(key); setError(""); }}
             className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold transition-all
@@ -511,11 +511,11 @@ function HowItWorks({ onSignUp }) {
         <div className="flex items-center justify-center gap-3 mb-10 sm:mb-14">
           <button onClick={() => setTab("clients")}
             className={`px-5 sm:px-7 py-2.5 rounded-full text-sm font-bold transition-all ${tab==="clients" ? "bg-blue-600 text-white shadow-lg shadow-blue-600/25" : "bg-gray-100 text-gray-500 hover:bg-gray-200"}`}>
-            Clients
+            Users
           </button>
           <button onClick={() => setTab("agent")}
             className={`px-5 sm:px-7 py-2.5 rounded-full text-sm font-bold transition-all ${tab==="agent" ? "bg-blue-600 text-white shadow-lg shadow-blue-600/25" : "bg-gray-100 text-gray-500 hover:bg-gray-200"}`}>
-            Agent
+            Agent or Landlord
           </button>
         </div>
 
@@ -763,7 +763,7 @@ export default function GHOUSECONNECT() {
               {
                 Icon: Shield,
                 title: "Verified Agents and Landlords",
-                desc: "only Agents with verified identity can list products & sell",
+                desc: "only Agents and Landlords with verified identity can list products & sell",
               },
               {
                 Icon: CreditCard,
@@ -772,8 +772,8 @@ export default function GHOUSECONNECT() {
               },
               {
                 Icon: Users,
-                title: "Visibility for Agents",
-                desc: "Agents list their Apartment Clients browse easily by categories, price, or location",
+                title: "Visibility for Agents and Landlords",
+                desc: "Agents and Landlords list their properties, Clients browse easily by categories, price, or location",
               },
               {
                 Icon: Star,
@@ -818,7 +818,7 @@ export default function GHOUSECONNECT() {
 
           {/* Large left-aligned heading */}
           <h2 className="text-4xl sm:text-5xl font-black text-gray-900 mb-16 sm:mb-24">
-            Who is it for
+            Who is it for?
           </h2>
 
           {/* ── ROW 1: Buyer — text left, staggered photos right ── */}
