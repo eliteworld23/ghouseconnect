@@ -268,7 +268,7 @@ function AuthModal({ onClose, defaultTab = "signin" }) {
       <div className="flex bg-blue-50 rounded-xl p-1 gap-1 mb-5">
         {[
           { key:"user",  Icon:User,      label: tab==="register" ? "Register as User"  : "Sign in as User"  },
-          { key:"agent", Icon:Building2, label: tab==="register" ? "Register as Agent" : "Sign in as Agent or Landlord" },
+          { key:"agent", Icon:Building2, label: tab==="register" ? "Register as Agent or Landlord" : "Sign in as Agent or Landlord" },
         ].map(({ key, Icon, label }) => (
           <button key={key} onClick={() => { setUT(key); setError(""); }}
             className={`flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-sm font-semibold transition-all
