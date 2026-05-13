@@ -194,9 +194,11 @@ const PropertyDetail = () => {
               </div>
             </div>
             <div style={{ textAlign: "right", flexShrink: 0 }}>
-              <div className="pd-price" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 800, color: BLUE }}>{formatPrice(property.price)}</div>
-              <div style={{ fontSize: 12, color: "#9ca3af", marginTop: 2 }}>{property.type === "rent" ? "per year" : "asking price"}</div>
+              <div className="pd-price" style={{ fontFamily: "Poppins, sans-serif", fontWeight: 800, color: BLUE }}>{formatPrice(property.price)} <span style={{ fontSize: 12, color: "#9ca3af", marginTop: 2 }}>{property.type === "rent" ? "per year" : "asking price"}</span></div>
+              {/* <div style={{ fontSize: 12, color: "#9ca3af", marginTop: 2 }}>{property.type === "rent" ? "per year" : "asking price"}</div> */}
+              <div style={{ fontFamily: "Poppins, sans-serif", fontWeight: 600, color: BLUE }}>Agency Commission: {(formatPrice(property.price * 10 / 100))}</div>
               <div style={{ display: "flex", gap: 8, justifyContent: "flex-end", marginTop: 10 }}>
+              
                 <button onClick={() => setSaved(s => !s)} style={{ width: 38, height: 38, borderRadius: 10, border: "1.5px solid #e5e7eb", background: saved ? "#fef2f2" : WHITE, display: "grid", placeItems: "center", cursor: "pointer", transition: "all .2s" }}>
                   <Heart size={16} color={saved ? "#ef4444" : "#9ca3af"} fill={saved ? "#ef4444" : "none"} />
                 </button>
