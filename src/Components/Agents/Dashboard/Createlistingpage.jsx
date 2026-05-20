@@ -16,7 +16,7 @@ const INITIAL_FORM = {
   description: "",
   type: "", purpose: "", label: "",
   state: "", city: "", area: "", address: "", zipCode: "",
-  currency: "NGN", price: "", agencyFee: "", duration: "monthly",
+  currency: "NGN", price: "", duration: "monthly",
   bedrooms: "", bathrooms: "", toilets: "",
   propertySize: "", propertySizePostfix: "Sqft", parking: "",
   noOfPlots: "", landSize: "", landSizePostfix: "Sqft",
@@ -82,7 +82,8 @@ export default function CreateListingPage() {
       fd.append("country",       "Nigeria");
       fd.append("zipCode",       form.zipCode || "100001");
       fd.append("price",         Number(form.price));
-      fd.append("inspectionFee", Number(form.agencyFee) || 0);
+      
+      // fd.append("inspectionFee", Number(form.agencyFee) || 0);
       fd.append("agent",         agentId);
 
       if (form.description)           fd.append("description",   form.description);

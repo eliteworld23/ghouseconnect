@@ -55,7 +55,7 @@ export default function PriceSection({ data, onChange }) {
 
       {/* Row 2: Agency Fee + Duration */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-        {/* Agency Fee */}
+        {/* Agency Fee
         <div className="flex flex-col gap-1.5">
           <label className="text-sm font-medium text-gray-700">
             Agency Fee <span className="text-red-500">*</span>
@@ -68,7 +68,7 @@ export default function PriceSection({ data, onChange }) {
             onChange={(e) => onChange("agencyFee", e.target.value)}
             className="w-full h-10 px-3 border border-gray-300 rounded-lg text-sm text-gray-900 placeholder-gray-400 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition"
           />
-        </div>
+        </div> */}
 
         {/* Duration */}
         <div className="flex flex-col gap-1.5">
