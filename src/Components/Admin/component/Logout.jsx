@@ -188,7 +188,7 @@ export default function LogoutModal({ onClose }) {
             <h2 className="nf-logout-title">Sign Out</h2>
             <p className="nf-logout-desc">
               Are you sure you want to sign out of your{" "}
-              <strong style={{ color: "#0b1a2e" }}>Nestfind</strong> account?
+              <strong style={{ color: "#0b1a2e" }}>GHOUSECONNECT</strong> account?
               You'll need to sign in again to access your dashboard.
             </p>
 

@@ -13,7 +13,7 @@ const PLAN_FEATURES = [
 export default function BillingTab() {
   return (
     <>
-      <SectionCard title="Current Plan" subtitle="Your active Nestfind subscription" icon={CreditCard}>
+      <SectionCard title="Current Plan" subtitle="Your active GHOUSECONNECT subscription" icon={CreditCard}>
         {/* Plan hero card */}
         <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-4 sm:p-5 text-white mb-5">
           <div className="flex items-center justify-between mb-3 sm:mb-4">

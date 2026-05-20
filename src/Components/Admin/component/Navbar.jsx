@@ -63,7 +63,7 @@ export default function Sidebar({ activeId, onSelect }) {
             </svg>
           </div>
           <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700, fontSize: 16, color: "#0b1a2e" }}>
-            Nest<span style={{ color: "#1a56db" }}>find</span>
+            GHOUSE<span style={{ color: "#1a56db" }}>CONNECT</span>
           </span>
         </div>
       </div>

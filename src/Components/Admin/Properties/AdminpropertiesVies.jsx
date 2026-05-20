@@ -352,7 +352,7 @@ export default function AdminPropertiesView() {
         <div style={{ marginBottom: 22 }}>
           <p style={{ margin: "0 0 3px", fontSize: 11, fontWeight: 700, color: BLUE, letterSpacing: "1.5px", textTransform: "uppercase" }}>Admin Panel</p>
           <h2 style={{ margin: 0, fontSize: "clamp(18px,2.2vw,26px)", fontWeight: 800, color: NAVY, fontFamily: "Poppins,sans-serif" }}>All Properties</h2>
-          <p style={{ margin: "4px 0 0", fontSize: 13, color: "#6b7280" }}>Every listing uploaded on Nestfind — view, search and manage.</p>
+          <p style={{ margin: "4px 0 0", fontSize: 13, color: "#6b7280" }}>Every listing uploaded on GhouseConnect — view, search and manage.</p>
         </div>
 
         {/* ── Error ── */}

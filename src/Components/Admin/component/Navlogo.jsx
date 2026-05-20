@@ -40,7 +40,7 @@ export default function NavLogo() {
           color: "#0b1a2e",
         }}
       >
-        Nest<span style={{ color: "#1a56db" }}>find</span>
+        GHOUSE<span style={{ color: "#1a56db" }}>CONNECT</span>
       </span>
     </div>
   );

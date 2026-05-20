@@ -168,7 +168,7 @@ export default function Sidebar({ activePage, onNavigate }) {
           fontWeight: 800, fontSize: 19,
           color: NAVY, letterSpacing: "-0.3px", flex: 1,
         }}>
-          Nest<span style={{ color: BLUE }}>find</span>
+          GHOUSE<span style={{ color: BLUE }}>CONNECT</span>
         </span>
         {/* Close button — only visible inside mobile drawer */}
         <button
@@ -303,7 +303,7 @@ export default function Sidebar({ activePage, onNavigate }) {
             fontFamily: "'Poppins', sans-serif",
             fontWeight: 800, fontSize: 17, color: NAVY, letterSpacing: "-0.3px",
           }}>
-            Nest<span style={{ color: BLUE }}>find</span>
+            GHOUSE<span style={{ color: BLUE }}>CONNECT</span>
           </span>
         </div>
         <button onClick={() => setDrawerOpen(true)} style={{

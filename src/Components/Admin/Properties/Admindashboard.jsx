@@ -288,7 +288,7 @@ export default function AdminDashboard({ initialTab }) {
                   {greeting}, Admin 👋
                 </h1>
                 <p style={{ margin: "3px 0 0", fontSize: "clamp(12px,1vw,14px)", color: "#6b7280" }}>
-                  Here's what's happening on Nestfind today.
+                  Here's what's happening on GHOUSCONNECT today.
                 </p>
               </div>
 

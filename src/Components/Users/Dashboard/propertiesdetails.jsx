@@ -157,7 +157,7 @@ const PropertyDetail = () => {
             <ArrowLeft size={16} /> Back
           </button>
           <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700, fontSize: 16, color: NAVY }}>
-            Nest<span style={{ color: BLUE }}>find</span>
+            GHOUSE<span style={{ color: BLUE }}>CONNECT</span>
           </span>
           <button onClick={() => setMobileOpen(true)} style={{ background: "none", border: "none", cursor: "pointer", padding: 4 }}>
             <Menu size={22} color={NAVY} />
