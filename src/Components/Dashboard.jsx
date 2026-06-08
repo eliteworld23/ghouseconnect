@@ -416,7 +416,7 @@ function AuthModal({ onClose, defaultTab = "signin" }) {
               </div>
             </div>
             <div className="text-right mb-5">
-              <a href="#" className="text-blue-600 text-sm font-medium hover:underline">Forgot password?</a>
+              <a href="/forgot-password" className="text-blue-600 text-sm font-medium hover:underline">Forgot password?</a>
             </div>
           </>
         )}

@@ -15,6 +15,7 @@ import Sidebar            from './Components/Agents/navbar'
 import UserSidebar        from './Components/Users/Dashboard/Navbar'
 import AgentOrdersPage    from './Components/Agents/Bookings/AgentOrders'
 import Settings           from './Components/Users/Settings/Setting'
+import ForgotPassword from './Components/Forgotpassword'
 
 // ── Admin imports ─────────────────────────────────────────────────────────────
 import AdminSidebar       from './Components/Admin/component/Navbar'
@@ -245,7 +246,10 @@ function App() {
           path="/settings"
           element={<ProtectedRoute><SettingsLayout /></ProtectedRoute>}
         />
+         
+         {/*--- FORGOT PASSWORD */}
 
+        <Route path="/forgot-password" element={<ForgotPassword />} />
         {/* ── Agent routes ── */}
         <Route
           path="/agent-dashboard"
