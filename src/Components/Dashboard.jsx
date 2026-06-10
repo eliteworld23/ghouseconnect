@@ -545,6 +545,154 @@ function HowItWorks({ onSignUp }) {
   );
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   POLICY MODAL
+═══════════════════════════════════════════════════════════════════════════ */
+const POLICY_CONTENT = {
+  privacy: {
+    title: "Privacy Policy",
+    lastUpdated: "June 2025",
+    sections: [
+      {
+        heading: "1. Information We Collect",
+        body: "We collect information you provide directly to us when you create an account, book an inspection, or contact us. This includes your full name, email address, phone number, residential address, and state of residence. We also collect usage data such as pages visited, search queries, and interaction logs to improve our services."
+      },
+      {
+        heading: "2. How We Use Your Information",
+        body: "Your information is used to create and manage your account, process inspection bookings, facilitate communication between buyers, sellers, and agents, send transactional emails and service updates, improve our platform features, and comply with legal obligations. We do not sell your personal data to third parties."
+      },
+      {
+        heading: "3. Data Sharing",
+        body: "We may share your information with verified real estate agents only to the extent necessary to complete a booking or transaction you have initiated, with payment processors to handle escrow transactions securely, and with law enforcement if required by applicable Nigerian law. All third-party partners are bound by confidentiality agreements."
+      },
+      {
+        heading: "4. Data Security",
+        body: "We implement industry-standard security measures including SSL encryption, secure token-based authentication, and regular security audits. However, no method of transmission over the internet is 100% secure. We encourage you to use strong passwords and to log out after each session."
+      },
+      {
+        heading: "5. Cookies",
+        body: "We use cookies and similar tracking technologies to maintain your session, remember your preferences, and analyse platform usage. You may disable cookies in your browser settings, but this may limit certain features of the platform."
+      },
+      {
+        heading: "6. Your Rights",
+        body: "You have the right to access, correct, or delete your personal data at any time by contacting us at support@ghouseconnect.com. You may also request a copy of the data we hold about you. Requests are processed within 14 business days."
+      },
+      {
+        heading: "7. Changes to This Policy",
+        body: "We may update this Privacy Policy from time to time. We will notify you of significant changes via email or a prominent notice on the platform. Continued use of GHOUSECONNECT after changes take effect constitutes acceptance of the updated policy."
+      },
+    ]
+  },
+  terms: {
+    title: "Terms of Service",
+    lastUpdated: "June 2025",
+    sections: [
+      {
+        heading: "1. Acceptance of Terms",
+        body: "By accessing or using GHOUSECONNECT, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any part of these terms, you must not use this platform."
+      },
+      {
+        heading: "2. Use of the Platform",
+        body: "GHOUSECONNECT provides a real estate marketplace that connects property buyers, renters, sellers, and agents across Nigeria. You agree to use the platform only for lawful purposes, to provide accurate information when registering, and not to engage in fraudulent listings or misrepresentation of any kind."
+      },
+      {
+        heading: "3. Account Responsibilities",
+        body: "You are responsible for maintaining the confidentiality of your account credentials. All activities that occur under your account are your responsibility. You must notify us immediately at support@ghouseconnect.com if you suspect unauthorised access to your account."
+      },
+      {
+        heading: "4. Inspection Bookings",
+        body: "When you book a property inspection, you agree to attend at the scheduled time or cancel at least 24 hours in advance. Repeated no-shows may result in temporary suspension of your booking privileges. GHOUSECONNECT acts as a facilitator and is not liable for the condition of any property inspected."
+      },
+      {
+        heading: "5. Escrow Payments",
+        body: "All financial transactions are processed through our secure escrow system. Funds are held in escrow until both parties confirm satisfactory completion of the agreed terms. GHOUSECONNECT charges a service fee as disclosed at the time of transaction. We are not responsible for disputes arising outside the platform's escrow process."
+      },
+      {
+        heading: "6. Prohibited Conduct",
+        body: "You may not post false, misleading, or fraudulent property listings; harass, threaten, or abuse other users or agents; attempt to circumvent the platform's escrow system by conducting off-platform transactions; scrape or harvest data from the platform; or use the platform for any illegal activity."
+      },
+      {
+        heading: "7. Limitation of Liability",
+        body: "GHOUSECONNECT is not liable for any indirect, incidental, or consequential damages arising from the use of the platform. Our total liability to you for any claim shall not exceed the amount of fees paid by you in the three months preceding the claim."
+      },
+      {
+        heading: "8. Governing Law",
+        body: "These Terms of Service are governed by the laws of the Federal Republic of Nigeria. Any disputes shall be resolved in the competent courts of Lagos State, Nigeria."
+      },
+    ]
+  },
+  refund: {
+    title: "Refund Policy",
+    lastUpdated: "June 2025",
+    sections: [
+      {
+        heading: "1. Inspection Booking Fees",
+        body: "Inspection booking fees are fully refundable if you cancel at least 24 hours before the scheduled inspection time. Cancellations made less than 24 hours before the inspection are non-refundable. If an agent cancels or fails to show up, you will receive a full refund within 3–5 business days."
+      },
+      {
+        heading: "2. Escrow Refunds",
+        body: "Funds held in escrow may be refunded if the property does not match its listed description as verified during inspection, if the seller or agent is found to have provided materially false information, or if both parties mutually agree to cancel the transaction before completion. Refund requests must be submitted within 48 hours of the triggering event."
+      },
+      {
+        heading: "3. Service Fees",
+        body: "GHOUSECONNECT's platform service fees are non-refundable once a transaction has been completed. In cases of proven platform error or technical failure on our part, service fees may be refunded at our sole discretion after review."
+      },
+      {
+        heading: "4. How to Request a Refund",
+        body: "To request a refund, contact our support team at support@ghouseconnect.com with your booking or transaction reference number, the reason for your refund request, and any supporting evidence. All refund requests are reviewed within 5 business days."
+      },
+      {
+        heading: "5. Refund Processing Time",
+        body: "Approved refunds are processed within 5–10 business days from the date of approval. The time for funds to appear in your account may vary depending on your bank or payment provider. GHOUSECONNECT is not responsible for delays caused by third-party financial institutions."
+      },
+      {
+        heading: "6. Disputes",
+        body: "If you are dissatisfied with our refund decision, you may escalate your complaint to our dispute resolution team at disputes@ghouseconnect.com. We are committed to resolving all disputes fairly and transparently within 14 business days."
+      },
+    ]
+  }
+};
+
+function PolicyModal({ type, onClose }) {
+  const policy = POLICY_CONTENT[type];
+  if (!policy) return null;
+  return (
+    <div className="fixed inset-0 z-[300] flex items-center justify-center p-4">
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose}/>
+      <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[85vh] flex flex-col overflow-hidden">
+        {/* Header */}
+        <div className="bg-blue-800 px-6 py-5 flex items-center justify-between shrink-0">
+          <div>
+            <h2 className="text-white font-bold text-lg">{policy.title}</h2>
+            <p className="text-white/60 text-xs mt-0.5">Last updated: {policy.lastUpdated}</p>
+          </div>
+          <button onClick={onClose} className="text-white/70 hover:text-white transition-colors p-1 rounded-lg hover:bg-white/10">
+            <X size={20}/>
+          </button>
+        </div>
+        {/* Body */}
+        <div className="overflow-y-auto px-6 py-6 space-y-5">
+          {policy.sections.map((s, i) => (
+            <div key={i}>
+              <h3 className="text-gray-900 font-semibold text-sm mb-1.5">{s.heading}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{s.body}</p>
+            </div>
+          ))}
+          <div className="pt-2 border-t border-gray-100 text-xs text-gray-400">
+            For questions, contact us at <span className="text-blue-600">support@ghouseconnect.com</span>
+          </div>
+        </div>
+        {/* Footer */}
+        <div className="px-6 py-4 border-t border-gray-100 shrink-0">
+          <button onClick={onClose} className="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2.5 rounded-xl text-sm font-semibold transition-all">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function GHOUSECONNECT() {
   const navigate = useNavigate();
 
@@ -560,6 +708,7 @@ export default function GHOUSECONNECT() {
   const [toast, setToast]         = useState(null);
   const [heroIdx, setHeroIdx]     = useState(0);
   const [loggedIn, setLoggedIn]   = useState(getIsLoggedIn);
+  const [policyModal, setPolicyModal] = useState(null);
 
   const heroImgs = [
     "https://images.unsplash.com/photo-1613977257363-707ba9348227?w=1400&q=80",
@@ -1147,10 +1296,28 @@ export default function GHOUSECONNECT() {
           </div>
 
         </div>
+
+        {/* Bottom bar: legal links + copyright */}
+        <div className="border-t border-white/20 mt-10 pt-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/60 text-xs">
+            <span>© {new Date().getFullYear()} GHOUSECONNECT. All rights reserved.</span>
+            <div className="flex items-center gap-5">
+              <button onClick={() => setPolicyModal("privacy")} className="hover:text-white transition-colors">Privacy Policy</button>
+              <span className="text-white/30">·</span>
+              <button onClick={() => setPolicyModal("terms")} className="hover:text-white transition-colors">Terms of Service</button>
+              <span className="text-white/30">·</span>
+              <button onClick={() => setPolicyModal("refund")} className="hover:text-white transition-colors">Refund Policy</button>
+            </div>
+          </div>
+        </div>
+
       </footer>
 
       {/* ── AUTH MODAL — only shown to guests ── */}
       {modal && <AuthModal onClose={handleModalClose} defaultTab={modalTab}/>}
+
+      {/* ── POLICY MODAL ── */}
+      {policyModal && <PolicyModal type={policyModal} onClose={() => setPolicyModal(null)}/>}
     </div>
   );
 }
