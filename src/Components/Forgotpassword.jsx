@@ -130,6 +130,7 @@ const ForgotPassword = () => {
   const [confirmPw, setConfirmPw]     = useState('');
   const [showNew, setShowNew]         = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
+  const [resetToken, setResetToken]   = useState('');
   const [isLoading, setIsLoading]     = useState(false);
   const [resending, setResending]     = useState(false);
   const [error, setError]             = useState('');
@@ -158,7 +159,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     setError(''); setIsLoading(true);
     try {
-      await axios.post(`${BASE}/api/v1/auth/forgot-password`, { email });
+      await axios.post(`${BASE}/api/v1/auth/forgot-password`, { email, role: 'user' });
       setStep(2);
     } catch (err) {
       setError(
@@ -175,7 +176,7 @@ const ForgotPassword = () => {
   const handleResend = async () => {
     setResending(true); setError(''); setSuccess('');
     try {
-      await axios.post(`${BASE}/api/v1/auth/forgot-password`, { email });
+      await axios.post(`${BASE}/api/v1/auth/forgot-password`, { email, role: 'user' });
       setSuccess('A new code has been sent to your email.');
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to resend. Please try again.');
@@ -189,7 +190,8 @@ const ForgotPassword = () => {
     e.preventDefault();
     setError(''); setIsLoading(true);
     try {
-      await axios.post(`${BASE}/api/v1/auth/verify-reset-otp`, { email, otp });
+      const res = await axios.post(`${BASE}/api/v1/auth/verify-password-reset-otp`, { email, otp, role: 'user' });
+      setResetToken(res.data?.data?.resetToken || '');
       setStep(3);
     } catch (err) {
       setError(
@@ -212,8 +214,10 @@ const ForgotPassword = () => {
       await axios.post(`${BASE}/api/v1/auth/reset-password`, {
         email,
         otp,
+        role: 'user',
         newPassword,
-        confirmPassword: confirmPw,
+        confirmNewPassword: confirmPw,
+        resetToken,
       });
       setSuccess('Password reset successfully! Redirecting to sign in…');
       setTimeout(() => navigate('/auth', { replace: true }), 2000);
