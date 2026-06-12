@@ -155,6 +155,36 @@ export async function withdrawCommission(payload) {
 }
 
 /* ─────────────────────────────────────────────
+   Available balance
+   ───────────────────────────────────────────── */
+export function useAvailableBalance() {
+  const [balance, setBalance] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError]     = useState(null);
+
+  const fetchBalance = useCallback(async () => {
+    setLoading(true); setError(null);
+    try {
+      const res = await fetch(`${API_BASE}/withdrawal/admin/balance`, { headers: AUTH_HEADERS() });
+      if (!res.ok) throw new Error(`Error ${res.status}`);
+      const json = await res.json();
+      // Handle various response shapes
+      const val =
+        json?.data?.availableBalance ??
+        json?.data?.balance ??
+        json?.availableBalance ??
+        json?.balance ??
+        null;
+      setBalance(val);
+    } catch (e) { setError(e.message); }
+    finally     { setLoading(false); }
+  }, []);
+
+  useEffect(() => { fetchBalance(); }, [fetchBalance]);
+  return { balance, loading, error, refetch: fetchBalance };
+}
+
+/* ─────────────────────────────────────────────
    Withdrawal stats (for stat cards)
    ───────────────────────────────────────────── */
 export function useWithdrawalStats() {
