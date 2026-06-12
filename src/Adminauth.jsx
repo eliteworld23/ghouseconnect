@@ -80,18 +80,18 @@ const Shell = ({ children }) => (
         <div className="aa-body">
           {/* Logo */}
           <div style={{ display:"flex", alignItems:"center", gap:10, justifyContent:"center", marginBottom:6 }}>
-            <div style={{ width:40, height:40, background:NAVY, borderRadius:10, display:"grid", placeItems:"center", boxShadow:"0 4px 14px rgba(11,26,46,0.3)" }}>
+            <div style={{ width:40, height:40, background:BLUE, borderRadius:10, display:"grid", placeItems:"center", boxShadow:"0 4px 14px rgba(26,86,219,0.35)" }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
                 <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                 <polyline points="9 22 9 12 15 12 15 22" stroke="white" strokeWidth="2" fill="none"/>
               </svg>
             </div>
             <span style={{ fontFamily:"'Poppins',sans-serif", fontWeight:800, fontSize:22, color:NAVY }}>
-              Nest<span style={{ color:BLUE }}>find</span>
+              GHOUSE<span style={{ color:BLUE }}>CONNECT</span>
             </span>
           </div>
           <p style={{ textAlign:"center", fontSize:11, color:"#9ca3af", letterSpacing:"1.2px", textTransform:"uppercase", marginBottom:22, fontWeight:500 }}>
-            Admin Portal
+            Nigeria's trusted real estate platform
           </p>
           {children}
         </div>
@@ -161,7 +161,7 @@ export default function AdminAuth() {
         </div>
         <div>
           <p style={{ fontSize:13, fontWeight:700, color:NAVY, margin:0 }}>Admin Access Only</p>
-          <p style={{ fontSize:12, color:GREY, margin:0 }}>This portal is restricted to Nestfind administrators.</p>
+          <p style={{ fontSize:12, color:GREY, margin:0 }}>This portal is restricted to GhouseConnect administrators.</p>
         </div>
       </div>
 
@@ -169,7 +169,7 @@ export default function AdminAuth() {
         Admin Sign In
       </h1>
       <p style={{ fontSize:13.5, color:GREY, textAlign:"center", marginBottom:20 }}>
-        Sign in to the Nestfind admin dashboard
+        Sign in to the GhouseConnect admin dashboard
       </p>
 
       {success && (
@@ -186,7 +186,7 @@ export default function AdminAuth() {
       <form onSubmit={handleLogin}>
         <div className="aa-field">
           <label className="aa-label">Email Address</label>
-          <input name="email" type="email" placeholder="admin@nestfind.com"
+          <input name="email" type="email" placeholder="admin@ghouseconnect.com"
             value={form.email} onChange={change}
             style={inputBase} onFocus={onFocus} onBlur={onBlur}
             required disabled={loading} autoComplete="email" />
