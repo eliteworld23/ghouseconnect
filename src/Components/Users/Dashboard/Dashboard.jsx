@@ -397,7 +397,7 @@ export default function UserDashboard() {
 
             {/* Status filter pills */}
             <div className="dash-pills" style={{ display: "flex", justifyContent: "center", gap: 10 }}>
-              {[{ val: "all", label: "All Status" }, { val: "rent", label: "For Rent" }, { val: "sale", label: "For Sale" }].map(({ val, label }) => (
+              {[{ val: "all", label: "All Status" }, { val: "rent", label: "For Rent" }, ].map(({ val, label }) => (
                 <button key={val} className="dash-pill" onClick={() => { setFilter(val); setCurrentPage(1); }}
                   style={{
                     padding: "7px 18px", borderRadius: 100, border: "1.5px solid",

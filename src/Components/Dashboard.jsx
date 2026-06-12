@@ -551,79 +551,81 @@ function HowItWorks({ onSignUp }) {
 const POLICY_CONTENT = {
   privacy: {
     title: "Privacy Policy",
-    lastUpdated: "June 2025",
+    lastUpdated: "June 2026",
     sections: [
-      {
-        heading: "1. Information We Collect",
-        body: "We collect information you provide directly to us when you create an account, book an inspection, or contact us. This includes your full name, email address, phone number, residential address, and state of residence. We also collect usage data such as pages visited, search queries, and interaction logs to improve our services."
-      },
-      {
-        heading: "2. How We Use Your Information",
-        body: "Your information is used to create and manage your account, process inspection bookings, facilitate communication between buyers, sellers, and agents, send transactional emails and service updates, improve our platform features, and comply with legal obligations. We do not sell your personal data to third parties."
-      },
-      {
-        heading: "3. Data Sharing",
-        body: "We may share your information with verified real estate agents only to the extent necessary to complete a booking or transaction you have initiated, with payment processors to handle escrow transactions securely, and with law enforcement if required by applicable Nigerian law. All third-party partners are bound by confidentiality agreements."
-      },
-      {
-        heading: "4. Data Security",
-        body: "We implement industry-standard security measures including SSL encryption, secure token-based authentication, and regular security audits. However, no method of transmission over the internet is 100% secure. We encourage you to use strong passwords and to log out after each session."
-      },
-      {
-        heading: "5. Cookies",
-        body: "We use cookies and similar tracking technologies to maintain your session, remember your preferences, and analyse platform usage. You may disable cookies in your browser settings, but this may limit certain features of the platform."
-      },
-      {
-        heading: "6. Your Rights",
-        body: "You have the right to access, correct, or delete your personal data at any time by contacting us at support@ghouseconnect.com. You may also request a copy of the data we hold about you. Requests are processed within 14 business days."
-      },
-      {
-        heading: "7. Changes to This Policy",
-        body: "We may update this Privacy Policy from time to time. We will notify you of significant changes via email or a prominent notice on the platform. Continued use of GHOUSECONNECT after changes take effect constitutes acceptance of the updated policy."
-      },
-    ]
+ 
+  {
+    heading: "1. Platform Monitoring and Record Keeping",
+    body: "To improve trust and transparency, GHOUSECONNECT may review listings before publication, monitor complaints, investigate reported listings, suspend suspicious accounts, and maintain records of platform activity to help ensure the integrity and safety of the platform."
+  },
+  {
+    heading: "2. Agent Verification",
+    body: "Agents participating in the Verified Agent Program may be required to provide information for verification purposes. Verification may include government-issued identification, phone verification, email verification, professional references, and proof of business operations."
+  },
+  {
+    heading: "3. Property Verification",
+    body: "GHOUSECONNECT may request supporting documentation to verify the authenticity of property listings. This may include agency authorization, property management authority, ownership documentation, video walkthrough evidence, and identity verification."
+  },
+  {
+    heading: "4. Verification Compliance",
+    body: "Failure to provide requested verification documents or supporting information may result in the removal of a listing from the platform. Verification status granted to agents may also be revoked at any time for violations of platform policies."
+  },
+  {
+    heading: "5. Investigation of Reported Listings",
+    body: "When a listing is reported as suspicious or misleading, GHOUSECONNECT may review available evidence, investigate the complaint, and retain relevant records as part of its efforts to maintain a transparent and trustworthy marketplace."
+  },
+  {
+    heading: "6. Use of Submitted Information",
+    body: "Information and documentation submitted for verification or platform operations may be used solely for reviewing listings, verifying agents, investigating complaints, maintaining platform records, and enforcing GHOUSECONNECT policies."
+  },
+  {
+    heading: "7. Policy Updates",
+    body: "GHOUSECONNECT may update this Privacy Policy from time to time to reflect changes in platform operations or legal requirements. Continued use of the platform after such updates constitutes acceptance of the revised policy."
+  }
+]
   },
   terms: {
     title: "Terms of Service",
     lastUpdated: "June 2025",
-    sections: [
-      {
-        heading: "1. Acceptance of Terms",
-        body: "By accessing or using GHOUSECONNECT, you agree to be bound by these Terms of Service and all applicable laws and regulations. If you do not agree with any part of these terms, you must not use this platform."
-      },
-      {
-        heading: "2. Use of the Platform",
-        body: "GHOUSECONNECT provides a real estate marketplace that connects property buyers, renters, sellers, and agents across Nigeria. You agree to use the platform only for lawful purposes, to provide accurate information when registering, and not to engage in fraudulent listings or misrepresentation of any kind."
-      },
-      {
-        heading: "3. Account Responsibilities",
-        body: "You are responsible for maintaining the confidentiality of your account credentials. All activities that occur under your account are your responsibility. You must notify us immediately at support@ghouseconnect.com if you suspect unauthorised access to your account."
-      },
-      {
-        heading: "4. Inspection Bookings",
-        body: "When you book a property inspection, you agree to attend at the scheduled time or cancel at least 24 hours in advance. Repeated no-shows may result in temporary suspension of your booking privileges. GHOUSECONNECT acts as a facilitator and is not liable for the condition of any property inspected."
-      },
-      {
-        heading: "5. Escrow Payments",
-        body: "All financial transactions are processed through our secure escrow system. Funds are held in escrow until both parties confirm satisfactory completion of the agreed terms. GHOUSECONNECT charges a service fee as disclosed at the time of transaction. We are not responsible for disputes arising outside the platform's escrow process."
-      },
-      {
-        heading: "6. Prohibited Conduct",
-        body: "You may not post false, misleading, or fraudulent property listings; harass, threaten, or abuse other users or agents; attempt to circumvent the platform's escrow system by conducting off-platform transactions; scrape or harvest data from the platform; or use the platform for any illegal activity."
-      },
-      {
-        heading: "7. Limitation of Liability",
-        body: "GHOUSECONNECT is not liable for any indirect, incidental, or consequential damages arising from the use of the platform. Our total liability to you for any claim shall not exceed the amount of fees paid by you in the three months preceding the claim."
-      },
-      {
-        heading: "8. Governing Law",
-        body: "These Terms of Service are governed by the laws of the Federal Republic of Nigeria. Any disputes shall be resolved in the competent courts of Lagos State, Nigeria."
-      },
+    sections:
+    [ 
+      { 
+        heading: "1. Inspection Fees",
+        body: "All users acknowledge that a property inspection booking fee of ₦5,000 is required for rental property inspections unless otherwise stated. The inspection fee covers inspection scheduling, administrative coordination, agent availability, and property inspection logistics. It is separate from rent payments, agency fees, legal fees, and tenancy agreements. Users who are unwilling to pay the applicable inspection fee should not proceed with inspection bookings through the platform." 
+      }, 
+      { 
+        heading: "2. Agency Fees", 
+        body: "Properties listed by verified agents may attract professional agency fees. The standard agency commission is 10% of the annual rent value unless otherwise negotiated between the tenant and the agent. By booking an inspection through GHOUSECONNECT, users acknowledge that agency fees may apply upon successful completion of a rental transaction. Users must not attempt to bypass verified agents after being introduced to a property." 
+      }, 
+      { 
+        heading: "3. Landlord-Provided Listings", 
+        body: "Landlords who list their properties directly on GHOUSECONNECT are not required to pay agency commissions. Where a property is listed directly by the owner, no agency fee shall apply unless the landlord independently engages an agent. Users should review listing details to determine whether a property is listed by a verified agent, landlord, or property manager." 
+      }, 
+      { 
+        heading: "4. Legal Fees", 
+        body: "Where legal fees are applicable to a tenancy transaction, such fees shall be paid directly to the landlord, solicitor, legal practitioner, or authorized representative handling the tenancy documentation. GHOUSECONNECT does not collect legal fees and does not participate in tenancy documentation or legal representation." 
+      }, 
+      { 
+        heading: "5. Agent Listing Requirements", 
+        body: "Agents may only post properties for which they have direct authority, access, instruction, or permission to market. Agents must not upload unauthorized properties, copy listings from competitors, repost properties they cannot facilitate inspections for, use misleading information, or upload false photographs. Agents are solely responsible for the accuracy of their listings." 
+      }, 
+      { 
+        heading: "6. Reporting and Fake Listings", 
+        body: "Users are encouraged to report suspicious listings that are fake, misleading, unavailable, fraudulently priced, or materially inaccurate. GHOUSECONNECT maintains a zero-tolerance policy toward fraudulent listings and may issue warnings, remove listings, suspend accounts, or permanently ban users who repeatedly violate platform policies." 
+      }, 
+      { 
+        heading: "7. User Responsibilities and Prohibited Activities", 
+        body: "Users are responsible for conducting independent due diligence, physically inspecting properties, reviewing tenancy terms before payment, and confirming property suitability. Prohibited activities include fake listings, identity fraud, property misrepresentation, circumventing inspection booking requirements or legitimate agency commissions, harassment of users or agents, unauthorized advertising, operating multiple fake accounts, and manipulation of reviews or ratings." 
+      }, 
+      { 
+        heading: "8. Limitation of Liability", 
+        body: "GHOUSECONNECT is a property listing and inspection-booking platform only. It is not a landlord, property owner, or property manager and does not guarantee property availability or tenancy approval. Users interact with agents, landlords, and property representatives at their own discretion and risk." 
+      } 
     ]
   },
   refund: {
     title: "Refund Policy",
-    lastUpdated: "June 2025",
+    lastUpdated: "June 2026",
     sections: [
       {
         heading: "1. Inspection Booking Fees",
