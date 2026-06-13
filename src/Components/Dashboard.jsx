@@ -1309,7 +1309,7 @@ export default function GHOUSECONNECT() {
         {/* Bottom bar: legal links + copyright */}
         <div className="border-t border-white/20 mt-10 pt-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/60 text-xs">
-            <span>© {new Date().getFullYear()} GHOUSECONNECT. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} GHOUSECONNECT. All rights reserved. | <a href="https://wa.link/zp54jv" target="_blank" className="hover:text-white transition-colors">Developed by Elite of Digilanx Technologies</a></span>
             <div className="flex items-center gap-5">
               <button onClick={() => setPolicyModal("privacy")} className="hover:text-white transition-colors">Privacy Policy</button>
               <span className="text-white/30">·</span>
