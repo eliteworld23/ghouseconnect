@@ -586,7 +586,7 @@ const POLICY_CONTENT = {
   },
   terms: {
     title: "Terms of Service",
-    lastUpdated: "June 2025",
+    lastUpdated: "June 2026",
     sections:
     [ 
       { 
@@ -626,32 +626,39 @@ const POLICY_CONTENT = {
   refund: {
     title: "Refund Policy",
     lastUpdated: "June 2026",
-    sections: [
-      {
-        heading: "1. Inspection Booking Fees",
-        body: "Inspection booking fees are fully refundable if you cancel at least 24 hours before the scheduled inspection time. Cancellations made less than 24 hours before the inspection are non-refundable. If an agent cancels or fails to show up, you will receive a full refund within 3–5 business days."
-      },
-      {
-        heading: "2. Escrow Refunds",
-        body: "Funds held in escrow may be refunded if the property does not match its listed description as verified during inspection, if the seller or agent is found to have provided materially false information, or if both parties mutually agree to cancel the transaction before completion. Refund requests must be submitted within 48 hours of the triggering event."
-      },
-      {
-        heading: "3. Service Fees",
-        body: "GHOUSECONNECT's platform service fees are non-refundable once a transaction has been completed. In cases of proven platform error or technical failure on our part, service fees may be refunded at our sole discretion after review."
-      },
-      {
-        heading: "4. How to Request a Refund",
-        body: "To request a refund, contact our support team at support@ghouseconnect.com with your booking or transaction reference number, the reason for your refund request, and any supporting evidence. All refund requests are reviewed within 5 business days."
-      },
-      {
-        heading: "5. Refund Processing Time",
-        body: "Approved refunds are processed within 5–10 business days from the date of approval. The time for funds to appear in your account may vary depending on your bank or payment provider. GHOUSECONNECT is not responsible for delays caused by third-party financial institutions."
-      },
-      {
-        heading: "6. Disputes",
-        body: "If you are dissatisfied with our refund decision, you may escalate your complaint to our dispute resolution team at disputes@ghouseconnect.com. We are committed to resolving all disputes fairly and transparently within 14 business days."
-      },
-    ]
+
+sections: [
+  {
+    heading: "1. Purpose of Inspection Fees",
+    body: "GHOUSECONNECT charges an inspection booking fee to facilitate inspection scheduling, property viewing coordination, agent availability, and administrative and operational costs. The inspection booking fee is currently ₦5,000 per inspection booking unless otherwise stated. Inspection fees are separate from rent payments, agency fees, legal fees, security deposits, and tenancy agreements."
+  },
+  {
+    heading: "2. General Refund Policy",
+    body: "Inspection booking fees are generally non-refundable once an inspection appointment has been confirmed. However, GHOUSECONNECT recognizes that certain situations may justify a refund and will review eligible requests fairly and objectively."
+  },
+  {
+    heading: "3. Eligible Refund Situations",
+    body: "Refunds may be approved where the assigned agent fails to attend the inspection without reasonable notice, the property becomes unavailable before inspection and no suitable alternative is offered, a duplicate payment is made, a technical payment error results in multiple or incorrect charges or failed bookings despite successful payment, a listing is confirmed to be fraudulent or misleading, or the property materially differs from its advertised description, including incorrect location, false property type, misleading photographs, or intentionally inaccurate rental pricing."
+  },
+  {
+    heading: "4. Non-Refundable Situations",
+    body: "Refunds will generally not be approved where the user fails to attend the scheduled inspection, changes their mind after booking, chooses a different property, later determines the property is beyond their budget, successfully completes the inspection and the property substantially matches the listing, or declines to proceed because clearly disclosed agency fees apply."
+  },
+  {
+    heading: "5. Refund Request Procedure",
+    body: "To request a refund, users must submit their full name, registered phone number, booking reference number, payment reference number, reason for the refund request, and supporting evidence where applicable. Refund requests must be submitted within seven (7) days of the scheduled inspection date. Requests submitted after this period may not be considered."
+  },
+  {
+    heading: "6. Investigation and Processing",
+    body: "Upon receiving a refund request, GHOUSECONNECT may review payment records, booking history, listing information, and supporting evidence, and may contact the user, agent, or landlord for additional information. Approved refunds are typically processed within 7–14 business days, although processing times may vary depending on banks, payment gateways, financial institutions, and public holidays."
+  },
+  {
+    heading: "7. Refund Decisions and Limitation of Liability",
+    body: "Following its review, GHOUSECONNECT may approve the refund, approve a partial refund where appropriate, or reject the request based on the available evidence and compliance with this policy. Users who submit fraudulent refund claims may face account suspension, permanent termination, booking restrictions, or legal action. Refund decisions apply only to inspection booking fees paid through GHOUSECONNECT, as the platform does not collect rent payments, agency commissions, or legal fees and does not participate in tenancy agreements."
+  }
+]
+
+
   }
 };
 
