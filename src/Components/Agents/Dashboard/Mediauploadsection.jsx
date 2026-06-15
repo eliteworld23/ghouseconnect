@@ -210,7 +210,7 @@ export default function MediaUploadSection({ data, onChange }) {
         <div>
           <div className="flex items-center justify-between mb-2">
             <label className="text-sm font-medium text-gray-700 flex items-center gap-1.5">
-              <VideoIcon /> Video <span className="text-xs text-gray-400 font-normal">(Optional)</span>
+              <VideoIcon /> Video <span className="text-xs text-gray-400 font-normal"></span>
             </label>
             <span className="text-xs text-gray-400">{videos.length}/{MAX_VIDEOS}</span>
           </div>
