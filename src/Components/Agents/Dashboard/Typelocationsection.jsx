@@ -1,7 +1,7 @@
 // src/components/TypeLocationSection.jsx
 
 const TYPES    = ["Apartment","House","Land","Office","Commercial"].map(v => ({ value: v.toLowerCase(), label: v }));
-const PURPOSES = ["Sale","Rent","Short Let"].map(v => ({ value: v.toLowerCase().replace(" ","_"), label: v }));
+const PURPOSES = ["Rent","Short Let"].map(v => ({ value: v.toLowerCase().replace(" ","_"), label: v }));
 const LABELS   = ["Featured","Hot","New"].map(v => ({ value: v.toLowerCase(), label: v }));
 
 const LOCATIONS = {

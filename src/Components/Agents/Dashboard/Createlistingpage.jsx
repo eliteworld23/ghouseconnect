@@ -83,7 +83,7 @@ export default function CreateListingPage() {
       fd.append("zipCode",       form.zipCode || "100001");
       fd.append("price",         Number(form.price));
       
-      // fd.append("inspectionFee", Number(form.agencyFee) || 0);
+      fd.append("inspectionFee", Number(form.agencyFee) || 5000); //Default agency fee 5000
       fd.append("agent",         agentId);
 
       if (form.description)           fd.append("description",   form.description);
