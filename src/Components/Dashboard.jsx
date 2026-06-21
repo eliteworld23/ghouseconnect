@@ -830,7 +830,7 @@ export default function GHOUSECONNECT() {
              Discover curated luxury properties aross Nigeria's most coveted addresses. Browse, book inspection, and lease all in one place.
             </p>
             <div className="flex flex-wrap gap-4 sm:gap-8">
-              {[["10K+","Listed Properties"],["95%","Satisfied Clients"],["12+","Years Experience"]].map(([n,l]) => (
+              {[["800+","Listed Properties"],["95%","Satisfied Clients"],["2+","Years Experience"]].map(([n,l]) => (
                 <div key={l}><div className="text-white font-black text-xl sm:text-2xl">{n}</div><div className="text-white/40 text-xs">{l}</div></div>
               ))}
             </div>
@@ -871,7 +871,7 @@ export default function GHOUSECONNECT() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 leading-tight mb-4 sm:mb-5">Nigeria's Most Trusted Real Estate Platform</h2>
             <p className="text-gray-500 text-base sm:text-lg mb-6">Connecting property seekers with exceptional listing across the country. Whether you're searching for your dream home or managing a portfolio of properties. GHOUSECONNECT have everything you need. </p>
             <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              {[["10K+","Active Listings"],["500+","Verified Agents and Landlords"],["95%","Success Rate"],["₦50B+","Transactions"]].map(([n,l]) => (
+              {[["800+","Active Listings"],["500+","Verified Agents and Landlords"],["95%","Success Rate"],["₦7M+","Transactions"]].map(([n,l]) => (
                 <div key={l} className="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-100">
                   <div className="text-blue-600 font-black text-xl sm:text-2xl">{n}</div>
                   <div className="text-gray-500 text-sm">{l}</div>
@@ -882,7 +882,7 @@ export default function GHOUSECONNECT() {
           <div className="relative mt-8 md:mt-0">
             <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=700&q=80" alt="about" className="rounded-3xl shadow-2xl w-full h-64 sm:h-80 md:h-96 object-cover"/>
             <div className="absolute -bottom-4 sm:-bottom-6 -left-2 sm:-left-6 bg-blue-600 text-white rounded-2xl p-4 sm:p-5 shadow-xl">
-              <div className="font-black text-2xl sm:text-3xl">12+</div>
+              <div className="font-black text-2xl sm:text-3xl">2+</div>
               <div className="text-blue-100 text-xs sm:text-sm">Years of Excellence</div>
             </div>
           </div>
