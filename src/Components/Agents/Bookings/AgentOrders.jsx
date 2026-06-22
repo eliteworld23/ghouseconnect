@@ -393,7 +393,7 @@ export default function AgentOrdersPage() {
                 <div style={{ position: "absolute", right: -18, top: -18, width: 88, height: 88, borderRadius: "50%", background: grad, opacity: .7 }} />
                 <div style={{ width: 48, height: 48, borderRadius: 14, background: grad, display: "grid", placeItems: "center", fontSize: 22, flexShrink: 0, zIndex: 1, boxShadow: `0 4px 14px ${shadow}` }}>{icon}</div>
                 <div style={{ zIndex: 1, minWidth: 0 }}>
-                  <p style={{ fontSize: 26, fontWeight: 800, color, margin: 0, fontFamily: "Poppins,sans-serif", lineHeight: 1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{value}</p>
+                  <p style={{ fontSize: "clamp(15px, 4.5vw, 26px)", fontWeight: 800, color, margin: 0, fontFamily: "Poppins,sans-serif", lineHeight: 1.1, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{value}</p>
                   <p style={{ fontSize: 11.5, color: "#94a3b8", margin: "4px 0 0", fontWeight: 600 }}>{label}</p>
                 </div>
               </div>
