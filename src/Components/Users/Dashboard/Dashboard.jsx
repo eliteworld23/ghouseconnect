@@ -48,12 +48,14 @@ function Sidebar({ mobileOpen, setMobileOpen }) {
 
         <div style={{ padding: "20px 16px 16px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <div style={{ width: 36, height: 36, background: "#0b1a2e", borderRadius: 10, display: "grid", placeItems: "center", flexShrink: 0 }}>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" stroke="white" strokeWidth="2" fill="none" />
-              </svg>
+            <div>
+                <img
+                src="/logo.png"
+                alt="G-House Connect"
+                className="h-8 sm:h-10 md:h-12 w-[40px] object-contain"
+              />
             </div>
+           
             <span style={{ fontFamily: "Poppins, sans-serif", fontWeight: 700, fontSize: 17, color: "#0b1a2e" }}>
               GHOUSE<span style={{ color: "#1a56db" }}>CONNECT</span>
             </span>
