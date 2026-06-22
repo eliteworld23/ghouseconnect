@@ -454,10 +454,19 @@ function ModalShell({ onClose, children }) {
         <div className="px-4 sm:px-8 py-6 sm:py-7">
           {/* Logo */}
           <div className="flex items-center justify-center gap-2 mb-1">
-            <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center shadow-lg shadow-blue-600/30">
+            <div className="" >
               <Home size={18} className="text-white"/>
             </div>
-            <span className="font-extrabold text-xl text-gray-900">GHOUSE<span className="text-blue-600">CONNECT</span></span>
+            {/* i want to put the logo here */}
+            
+            <div>
+                <img
+                src="/logo.png"
+                alt="G-House Connect"
+                className="h-8 sm:h-10 md:h-12 w-[40px] object-contain"
+              />
+            </div>
+                  <span className="text-blue-400 text-lg sm:text-xl font-bold">GHOUSE<span className="text-blue-400">CONNECT</span></span>
           </div>
           <p className="text-center text-[11px] text-gray-400 uppercase tracking-widest mb-6 font-medium">
             Nigeria's Trusted Real Estate Platform
@@ -781,7 +790,14 @@ export default function GHOUSECONNECT() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a1628] shadow-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
           <button onClick={() => scrollTo("home")} className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center"><Home size={16} className="text-white"/></div>
+            <div>
+                <img
+                src="/logo.png"
+                alt="G-House Connect"
+                className="h-8 sm:h-10 md:h-12 w-[40px] object-contain"
+              />
+            </div>
+            {/* <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center"><Home size={16} className="text-white"/></div> */}
             <span className="text-white text-lg sm:text-xl font-bold">GHOUSE<span className="text-blue-400">CONNECT</span></span>
           </button>
 
