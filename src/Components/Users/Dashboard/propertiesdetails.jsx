@@ -302,7 +302,7 @@ const PropertyDetail = () => {
                     {property.agentFee || property.agent?.fee ? (
                       <>
                         <p style={{ fontFamily: "Poppins, sans-serif", fontWeight: 800, fontSize: "1.3rem", color: BLUE, margin: 0 }}>{formatPrice(property.agentFee || property.agent?.fee)}</p>
-                        <p style={{ fontSize: 11.5, color: "#9ca3af", margin: "2px 0 0" }}>agent fee</p>
+                        <p style={{ fontSize: 11.5, color: "#9ca3af", margin: "2px 0 0" }}>Inspection Fee</p>
                       </>
                     ) : (
                       <p style={{ fontSize: 13, fontWeight: 600, color: "#6b7280", margin: 0, fontStyle: "italic" }}>Contact agent</p>

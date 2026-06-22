@@ -370,8 +370,8 @@ const InspectionModal = ({ property, onClose }) => {
                 {/* Agent Fee strip */}
                 <div style={{ background: "#f0f4ff", border: "1px solid #bfdbfe", borderRadius: 10, padding: "11px 16px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                   <div>
-                    <span style={{ fontSize: 12.5, fontWeight: 600, color: "#374151" }}>Agent Fee</span>
-                    <p style={{ fontSize: 11, color: "#9ca3af", margin: "2px 0 0", fontWeight: 500 }}>Payable to {property.agent.name}</p>
+                    <span style={{ fontSize: 12.5, fontWeight: 600, color: "#374151" }}>Inspection Fee</span>
+                    <p style={{ fontSize: 11, color: "#9ca3af", margin: "2px 0 0", fontWeight: 500 }}>Payable</p>
                   </div>
                   <div style={{ textAlign: "right" }}>
                     {property.agentFee || property.agent?.fee ? (
