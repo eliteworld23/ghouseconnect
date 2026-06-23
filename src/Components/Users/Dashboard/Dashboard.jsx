@@ -10,7 +10,6 @@ import LogoutModal from "../LogoutModal";
 const formatPrice = (price) =>
   "₦" + new Intl.NumberFormat("en-NG").format(price);
 
-const CITIES = ["All Cities", "Victoria Island", "Lekki", "Ikoyi", "Yaba", "Ajah", "Surulere", "Magodo", "Eko Atlantic"];
 const PROP_TYPES = ["All Types", "house", "apartment", "condo", "townhouse"];
 
 /* ─── SIDEBAR ────────────────────────────────────────────────────────────────── */
@@ -199,7 +198,8 @@ export default function UserDashboard() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [filter, setFilter] = useState("all");
-  const [cityFilter, setCityFilter] = useState("All Cities");
+  const [stateFilter, setStateFilter] = useState("All States");
+  const [stateOptions, setStateOptions] = useState(["All States"]);
   const [typeFilter, setTypeFilter] = useState("All Types");
   const [properties, setProperties] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -212,7 +212,8 @@ export default function UserDashboard() {
       setLoading(true); setFetchError("");
       try {
         const base = import.meta.env.VITE_API_BASE_URL || "https://gtimeconnect.onrender.com";
-        const res = await fetch(`${base}/api/v1/properties/all`, {
+        // limit=1000 ensures we pull ALL properties, not just the backend's default page of 10
+        const res = await fetch(`${base}/api/v1/properties/all?limit=1000`, {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
         });
         const data = await res.json();
@@ -223,7 +224,7 @@ export default function UserDashboard() {
           _id: p._id || p.id,
           title: p.title,
           location: [p.street, p.city, p.state].filter(Boolean).join(", "),
-          city: p.city, state: p.state,
+          city: p.city, state: p.state?.trim(),
           propertyType: p.propertyType,
           price: p.price,
           inspectionFee: p.inspectionFee,
@@ -232,6 +233,12 @@ export default function UserDashboard() {
           agent: { name: p.agent?.fullName || p.agent?.name || "Agent", avatar: p.agent?.avatar || null },
         }));
         setProperties(mapped);
+
+        // Build the state dropdown dynamically from whatever states actually exist in the data
+        const uniqueStates = Array.from(
+          new Set(mapped.map(p => p.state).filter(Boolean))
+        ).sort();
+        setStateOptions(["All States", ...uniqueStates]);
       } catch (err) {
         console.error(err);
         setFetchError("Could not load properties. Please try again later.");
@@ -241,14 +248,13 @@ export default function UserDashboard() {
   }, []);
 
   const filtered = properties.filter(p => {
-    const matchCity = cityFilter === "All Cities" || p.city === cityFilter;
-    const matchState = cityFilter === "All Cities" || p.state === cityFilter;
+    const matchState = stateFilter === "All States" || p.state === stateFilter;
     const matchPType = typeFilter === "All Types" || p.propertyType === typeFilter.toLowerCase();
     const matchSearch =
       p.title.toLowerCase().includes(search.toLowerCase()) ||
       p.location.toLowerCase().includes(search.toLowerCase()) ||
       p.agent.name.toLowerCase().includes(search.toLowerCase());
-    return (matchCity || matchState) && matchPType && matchSearch;
+    return matchState && matchPType && matchSearch;
   });
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PER_PAGE));
@@ -369,12 +375,12 @@ export default function UserDashboard() {
                   style={{ width: "100%", padding: "14px 12px 14px 34px", border: "none", outline: "none", background: "transparent", fontSize: 13, color: "#374151", fontFamily: "inherit", boxSizing: "border-box" }}
                 />
               </div>
-              {/* City */}
+              {/* State */}
               <div className="dash-search-field dash-select-wrap" style={{ position: "relative", flex: 1, display: "flex", alignItems: "center" }}>
                 <MapPin size={13} color="#9ca3af" style={{ position: "absolute", left: 11, pointerEvents: "none" }} />
-                <select value={cityFilter} onChange={e => { setCityFilter(e.target.value); setCurrentPage(1); }}
+                <select value={stateFilter} onChange={e => { setStateFilter(e.target.value); setCurrentPage(1); }}
                   style={{ width: "100%", padding: "14px 24px 14px 28px", border: "none", outline: "none", background: "transparent", fontSize: 12.5, color: "#374151", fontFamily: "inherit", appearance: "none", cursor: "pointer" }}>
-                  {CITIES.map(c => <option key={c}>{c}</option>)}
+                  {stateOptions.map(s => <option key={s}>{s}</option>)}
                 </select>
                 <ChevronDown size={12} color="#9ca3af" style={{ position: "absolute", right: 8, pointerEvents: "none" }} />
               </div>
